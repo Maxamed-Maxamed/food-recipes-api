@@ -19,6 +19,7 @@ router.get('/', (req, res) => {
                 <nav class="navbar">
                     <a href="/">Home</a>
                     <a href="/about">About</a>
+                    <a href="/search">Search</a>
                 </nav>
                 <main>
                     <h2>Welcome to the Food Recipes API</h2>

@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const axios = require('axios');
 const homeRouter = require('./routes/home');
 const aboutRouter = require('./routes/about');
-const searchRouter = require('./routes/search');
+const searchRouter = require('./routes/search'); // Importing the search router
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -15,7 +15,7 @@ app.use(express.static('public')); // Serve static files from the 'public' folde
 // Mount the route handlers
 app.use('/', homeRouter);
 app.use('/about', aboutRouter);
-app.use('/', searchRouter); // 
+app.use('/search', searchRouter); // Mount the search router
 
 app.get('/recipe/:id', async (req, res) => {
     const recipeId = req.params.id;
